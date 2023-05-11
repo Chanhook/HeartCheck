@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+    <link href="./css/question_page1.css" rel="stylesheet" />
+    <link href="./css/question_page2.css" rel="stylesheet" />
+    <link href="./css/question_page3.css" rel="stylesheet" />
+    <title>question_page1</title>
+</head>
+<script>
+    function goToNextPage() {
+        window.location.href = "result_page_good.html";
+    }
+    function showValue(val) {
+        document.getElementById("range-value").innerHTML = val;
+    }
+</script>
+
+<body>
+    <div class="v1_3">
+        <form action="/submit" method="post">
+            <span class="v1_40">High blood pressure</span><span class="v1_41">Have you been
+                told you have high blood pressure by a doctor, nurse, or other health professional?</span>
+
+            <div class="v1_42"><input type="radio" name="high_bp" value="1"> Yes </div>
+            <div class="v1_45"><input type="radio" name="high_bp" value="0"> No</div>
+
+            <span class="v1_444">High cholesterol</span><span class="v1_445">Have you EVER been told by a doctor, nurse
+                or
+                other health professional that your blood cholesterol is high?</span>
+            <div class="v1_446"><input type="radio" name="high_chol" value="1"> Yes </div>
+            <div class="v1_449"><input type="radio" name="high_chol" value="0"> No</div>
+
+
+            <span class="v1_452">Cholesterol check</span><span class="v1_453">Did you check your cholesterol
+                within
+                past five years?</span>
+            <div class="v1_454"><input type="radio" name="chol_chk" value="1"> Yes </div>
+            <div class="v1_457"><input type="radio" name="chol_chk" value="0"> No</div>
+
+            <span class="v1_460">Body Mass Index (BMI)</span><span class="v1_461">Enter your BMI.</span>
+            <label class="v1_462">BMI: <input type="text" name="name"></label>
+
+            <span class="v1_468">Smoking</span><span class="v1_469">Have you smoked at least 100 cigarettes in your
+                entire life?</span>
+            <div class="v1_470"><input type="radio" name="smoking" value="1"> Yes </div>
+            <div class="v1_473"><input type="radio" name="smoking" value="0"> No</div>
+
+            <span class="v1_476">Stroke</span><span class="v1_477">Have you ever told you had a stroke?</span>
+            <div class="v1_478"><input type="radio" name="stroke" value="1"> Yes </div>
+            <div class="v1_481"><input type="radio" name="stroke" value="0"> No</div>
+
+            <span class="v1_492">Diabetes</span><span class="v1_493">Have you ever told you have
+                diabetes?</span>
+            <div class="v1_494"><input type="radio" name="diabetes" value="1"> Yes </div>
+            <div class="v1_497"><input type="radio" name="diabetes" value="0"> No</div>
+
+
+
+
+
+            <span class="v1_503">Physical activity</span><span class="v1_504">Did you do the
+                physical activity or exercise during the past 30 days other than their regular job</span>
+            <div class="v1_505"><input type="radio" name="physical" value="1"> Yes </div>
+            <div class="v1_508"><input type="radio" name="physical" value="0"> No</div>
+
+            <span class="v1_511">Fruits</span><span class="v1_512">Do you consume Fruit 1 or more times per
+                day?</span>
+
+
+            <div class="v1_513"><input type="radio" name="fruits" value="1"> Yes </div>
+            <div class="v1_516"><input type="radio" name="fruits" value="0"> No</div>
+
+            <span class="v1_519">Veggies</span><span class="v1_520">Do you consume Vegetables 1 or more times per
+                day?</span>
+
+            <div class="v1_521"><input type="radio" name="veggies" value="1"> Yes </div>
+            <div class="v1_524"><input type="radio" name="veggies" value="0"> No</div>
+
+
+            <span class="v1_527">Heavy alcohol consumption</span>
+            <span class="v1_705">Are you a heavy drinkers (adult men having more than 14 drinks per week and adult
+                women having more than 7 drinks per week)?</span>
+            <div class="v1_706"><input type="radio" name="heavy_drink" value="1"> Yes </div>
+            <div class="v1_709"><input type="radio" name="heavy_drink" value="0"> No</div>
+
+            <span class="v1_531">Health care</span><span class="v1_532">Do you have any kind of health care coverage,
+                including health insurance, prepaid plans
+                such
+                as HMOs, or government plans such as Medicare, or Indian Health Service?</span>
+            <div class="v1_533"><input type="radio" name="health" value="1"> Yes </div>
+            <div class="v1_536"><input type="radio" name="health" value="0"> No</div>
+
+
+            <span class="v1_539">No doctor because of cost</span><span class="v1_540">Was there a time in the past
+                12
+                months when you needed to see a doctor but could not because of cost?</span>
+            <div class="v1_541"><input type="radio" name="no_doc_bc_cost" value="1"> Yes </div>
+            <div class="v1_544"><input type="radio" name="no_doc_bc_cost" value="0"> No</div>
+
+            <span class="v1_547">General health</span>
+            <span class="v1_548">Would you say that in general your
+                health
+                is?</span>
+            <div class="v1_687"><span class="v1_688">Very Bad</span><span class="v1_689">Very Good</span>
+
+
+                <div class="v1_690">
+                    <input type="range" id="range-input" name="gen_health" min="0" max="5"
+                        oninput="showValue(this.value)">
+
+                    <p>Choose Number: <span id="range-value">0</span></p>
+
+
+                </div>
+
+
+                <span class="v1_692">0</span><span class="v1_1">1</span><span class="v1_694">2</span><span
+                    class="v1_696">3</span><span class="v1_698">4</span><span class="v1_700">5</span>
+
+            </div>
+
+
+
+
+            <span class="v1_584">Mental health</span>
+            <span class="v1_585">Now thinking about your mental health, which includes stress, depression,
+                and problems with emotions, for how many days during the past 30 days was your mental health not good?
+            </span>
+            <span class="v1_718">0</span><span class="v1_719">3</span><span class="v1_720">6</span><span
+                class="v1_721">9</span><span class="v1_722">12</span><span class="v1_723">15</span><span
+                class="v1_724">18</span><span class="v1_725">21</span><span class="v1_726">24</span><span
+                class="v1_727">27</span><span class="v1_728">30</span>
+            <div class="v1_691_1">
+                <input type="range" id="range-input" name="mental_health" min="0" max="30"
+                    oninput="showValue(this.value)">
+
+                <p>Choose Number: <span id="range-value">0</span></p>
+
+            </div>
+
+
+
+
+            <span class="v1_592">Physical health</span>
+            <span class="v1_593">Now thinking about your physical health,
+                which includes physical illness and injury, for how many days during the past 30 days was your physical
+                health not good?</span>
+            <span class="v1_734">0</span><span class="v1_735">3</span><span class="v1_736">6</span><span
+                class="v1_737">9</span><span class="v1_738">12</span><span class="v1_739">15</span><span
+                class="v1_740">18</span><span class="v1_741">21</span><span class="v1_742">24</span><span
+                class="v1_743">27</span><span class="v1_744">30</span>
+
+            <div class="v1_692">
+                <input type="range" id="range-input" name="physical_health" min="0" max="30"
+                    oninput="showValue(this.value)">
+
+                <p>Choose Number: <span id="range-value">0</span></p>
+
+            </div>
+
+
+
+
+            <span class="v1_600">Difficult walk</span>
+            <span class="v1_601">Do you have serious difficulty walking or climbing stairs?</span>
+
+            <div class="v1_602"><input type="radio" name="diff_walk" value="1"> Yes </div>
+            <div class="v1_605"><input type="radio" name="diff_walk" value="0"> No</div>
+
+
+
+
+
+            <span class="v1_608">Sex</span><span class="v1_609">Check your sex.</span>
+            <div class="v1_624"><input type="radio" name="sex" value="1"> Female </div>
+            <div class="v1_627"><input type="radio" name="sex" value="0"> Male</div>
+
+            <span class="v1_613">Age</span>
+            <div class="v13_128">
+                <label for="option">Select an option:</label>
+                <select name="age">
+
+                    <option value="1">Age 18 to 24</option>
+                    <option value="2">Age 25 to 29</option>
+                    <option value="3">Age 30 to 34</option>
+                    <option value="4">Age 35 to 39</option>
+                    <option value="5">Age 40 to 44</option>
+                    <option value="6">Age 45 to 49</option>
+                    <option value="7">Age 50 to 54</option>
+                    <option value="8">Age 55 to 59</option>
+                    <option value="9">Age 60 to 64</option>
+                    <option value="10">Age 65 to 69</option>
+                    <option value="11">Age 70 to 74</option>
+                    <option value="12">Age 75 to 79</option>
+                    <option value="13">Age 80 or older</option>
+                    <option value="14">Don't Know / Refused to answer</option>
+
+                </select>
+            </div>
+
+
+            <span class="v1_630">Income</span><span class="v1_631">Check your income
+                states.</span>
+            <div class="v1_326">
+                <span class="v1_327">Low income</span><span class="v1_328">High income</span>
+                <div class="v1_690">
+                    <input type="range" style="width : 780px;" id="range-input" name="income" min="0" max="8"
+                        oninput="showValue(this.value)">
+
+                    <p>Choose Number: <span id="range-value">0</span></p>
+
+                </div>
+                <span class="v1_331">0</span><span class="v1_332">1</span><span class="v1_333">2</span><span
+                    class="v1_334">3</span><span class="v1_335">4</span><span class="v1_336">5</span><span
+                    class="v1_337">6</span><span class="v1_338">7</span><span class="v1_339">8</span>
+
+
+            </div>
+
+
+            <span class="v1_613_2">Education</span>
+            <div class="v13_128_2">
+                <label for="option">Select an option:</label>
+                <select name="education">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+
+
+                </select>
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+
+
+
+
+
+    <div class="v1_418">
+        <div class="v1_419">
+            <div class="v1_420">
+                <div class="v1_421"></div>
+            </div>
+        </div><span class="v1_422">Health Questions</span>
+    </div>
+    <div class="v1_423"><span class="v1_424">These are questions to determine whether you have heart disease or not.
+            Please answer carefully and honestly.</span></div>
+    <div class="v1_379"><span class="v1_380">Health Questions</span></div>
+    <div class="v1_381"><span class="v1_382">Safe Heart Disease Prediction Results</span></div>
+
+
+
+    <span class="v1_394">CheckMyHeart</span>
+    <div class="v1_395"></div><span class="v1_396">Safe Heart Disease Checker</span>
+
+
+    <button class="v1_430" onclick="goToNextPage()">
+        <span class="v1_431">Next </span>
+    </button>
+
+</body>
+
+</html>
