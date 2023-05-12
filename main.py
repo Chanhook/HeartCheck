@@ -6,6 +6,8 @@ from fastapi.templating import Jinja2Templates
 from input_data import InputData
 from preprocess import process_input_data
 from IS import *
+import pandas as pd
+
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -27,12 +29,62 @@ def disable_cat(form: str = Form(...)):
 
 
 @app.post("/predict")
-async def predict(input_data: InputData):
+async def predict(
+    HighBP: float = Form(float),
+    HighChol: float  = Form(float),
+    CholCheck: float = Form(float),
+    BMI: float = Form(float),
+    Smoker: float = Form(float),
+    Stroke: float = Form(float),
+    Diabetes: float = Form(float),
+    PhysActivity: float = Form(float),
+    Fruits: float = Form(float),
+    Veggies: float = Form(float),
+    HvyAlcoholConsump: float = Form(float),
+    AnyHealthcare: float = Form(float),
+    NoDocbcCost: float = Form(float),
+    GenHlth: float = Form(float),
+    MentHlth: float = Form(float),
+    PhysHlth: float = Form(float),
+    DiffWalk: float = Form(float),
+    Sex: float = Form(float),
+    Age: float = Form(float),
+    Education: float = Form(float),
+    Income: float = Form(float),
+    ):
+    # data 받기
+    input_data = {
+        HighBP: float,
+        HighChol: float,
+        CholCheck: float,
+        BMI: float,
+        Smoker: float,
+        Stroke: float,
+        Diabetes: float,
+        PhysActivity: float,
+        Fruits: float,
+        Veggies: float,
+        HvyAlcoholConsump: float,
+        AnyHealthcare: float,
+        NoDocbcCost: float,
+        GenHlth: float,
+        MentHlth: float,
+        PhysHlth: float,
+        DiffWalk: float,
+        Sex: float,
+        Age: float,
+        Education: float,
+        Income: float,
+    }
+
+
+
     # Training
     # set logging level
     logging.basicConfig(level=logging.DEBUG)
 
-    input_df = process_input_data(input_data)
+    #input_df = process_input_data(input_data)
+    input_df = pd.DataFrame.from_dict(input_data, orient='index').T
 
     # set random seed
     seed = 34

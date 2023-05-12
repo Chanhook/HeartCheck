@@ -54,7 +54,6 @@ body {
 .v1_42 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_42.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -93,7 +92,6 @@ body {
 .v1_45 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_45.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -156,7 +154,6 @@ body {
 .v1_446 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_446.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -196,7 +193,6 @@ body {
 .v1_449 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_449.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -260,7 +256,6 @@ body {
 .v1_454 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_454.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -300,7 +295,7 @@ body {
 .v1_457 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_457.png");
+  
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -364,7 +359,6 @@ body {
 .v1_462 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_462.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -413,7 +407,6 @@ body {
 .v1_470 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_470.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -453,7 +446,6 @@ body {
 .v1_473 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_473.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -517,7 +509,6 @@ body {
 .v1_478 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_478.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -557,7 +548,6 @@ body {
 .v1_481 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_481.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -621,7 +611,6 @@ body {
 .v1_494 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_494.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -661,7 +650,6 @@ body {
 .v1_497 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_497.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -701,7 +689,6 @@ body {
 .v1_418 {
   width: 996px;
   height: 30px;
-  background: url("../images/v1_418.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -714,7 +701,6 @@ body {
 .v1_419 {
   width: 24px;
   height: 29px;
-  background: url("../images/v1_419.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -727,7 +713,6 @@ body {
 .v1_420 {
   width: 24px;
   height: 24px;
-  background: url("../images/v1_420.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -761,7 +746,6 @@ body {
 .v1_423 {
   width: 996px;
   height: 44px;
-  background: url("../images/v1_423.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -991,7 +975,7 @@ body {
   opacity: 1;
   position: absolute;
   color: rgba(255,255,255,1);
-  top: 3578px;
+  top: 3478px;
   left: 1154px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;

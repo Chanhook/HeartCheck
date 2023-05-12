@@ -53,7 +53,6 @@ body {
 .v1_505 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_505.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -93,7 +92,6 @@ body {
 .v1_508 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_508.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -157,7 +155,6 @@ body {
 .v1_513 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_513.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -197,7 +194,6 @@ body {
 .v1_516 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_516.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -261,7 +257,6 @@ body {
 .v1_521 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_521.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -301,7 +296,6 @@ body {
 .v1_524 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_524.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -353,7 +347,6 @@ body {
 .v1_706 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_706.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -393,7 +386,6 @@ body {
 .v1_709 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_709.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -469,7 +461,6 @@ body {
 .v1_533 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_533.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -509,7 +500,6 @@ body {
 .v1_536 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_536.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -573,7 +563,6 @@ body {
 .v1_541 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_541.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -613,7 +602,7 @@ body {
 .v1_544 {
   width: 976px;
   height: 22px;
-  background: url("../images/v1_544.png");
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1016,7 +1005,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 2165px;
+  top: 2135px;
   left: 229px;
   overflow: hidden;
 }
@@ -1101,11 +1090,11 @@ span#range-value {
   left: 1px;
   overflow: hidden;
 }
-.v1_692 {
+.v1_0 {
   width: 8px;
   color: rgba(155,155,155,1);
   position: absolute;
-  top: 97px;
+  top: 77px;
   left: 25px;
   font-family: Arial;
   font-weight: Narrow;
@@ -1117,7 +1106,7 @@ span#range-value {
   width: 8px;
   color: rgba(155,155,155,1);
   position: absolute;
-  top: 97px;
+  top: 77px;
   left: 210px;
   font-family: Arial;
   font-weight: Narrow;
@@ -1130,7 +1119,7 @@ span#range-value {
   width: 8px;
   color: rgba(155,155,155,1);
   position: absolute;
-  top: 97px;
+  top: 77px;
   left: 400px;
   font-family: Arial;
   font-weight: Narrow;
@@ -1142,7 +1131,7 @@ span#range-value {
   width: 20px;
   color: rgba(155,155,155,1);
   position: absolute;
-  top: 97px;
+  top: 77px;
   left: 580px;
   font-family: Arial;
   font-weight: Narrow;
@@ -1154,7 +1143,7 @@ span#range-value {
   width: 19px;
   color: rgba(155,155,155,1);
   position: absolute;
-  top: 97px;
+  top: 77px;
   left: 775px;
   font-family: Arial;
   font-weight: Narrow;
@@ -1166,7 +1155,7 @@ span#range-value {
   width: 15px;
   color: rgba(155,155,155,1);
   position: absolute;
-  top: 97px;
+  top: 77px;
   left: 971px;
   font-family: Arial;
   font-weight: Narrow;
