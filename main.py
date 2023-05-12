@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+
 from input_data import InputData
 from preprocess import process_input_data
 from IS import *
@@ -28,54 +29,57 @@ def disable_cat(form: str = Form(...)):
     return f'form: {form}'
 
 
-@app.post("/predict")
+@app.post("/predict", response_class=HTMLResponse)
 async def predict(
-    HighBP: float = Form(float),
-    HighChol: float  = Form(float),
-    CholCheck: float = Form(float),
-    BMI: float = Form(float),
-    Smoker: float = Form(float),
-    Stroke: float = Form(float),
-    Diabetes: float = Form(float),
-    PhysActivity: float = Form(float),
-    Fruits: float = Form(float),
-    Veggies: float = Form(float),
-    HvyAlcoholConsump: float = Form(float),
-    AnyHealthcare: float = Form(float),
-    NoDocbcCost: float = Form(float),
-    GenHlth: float = Form(float),
-    MentHlth: float = Form(float),
-    PhysHlth: float = Form(float),
-    DiffWalk: float = Form(float),
-    Sex: float = Form(float),
-    Age: float = Form(float),
-    Education: float = Form(float),
-    Income: float = Form(float),
+    request: Request,
+    HighBP: float = Form(...),
+    HighChol: float  = Form(...),
+    CholCheck: float = Form(...),
+    BMI: float = Form(...),
+    Smoker: float = Form(...),
+    Stroke: float = Form(...),
+    Diabetes: float = Form(...),
+    PhysActivity: float = Form(...),
+    Fruits: float = Form(...),
+    Veggies: float = Form(...),
+    HvyAlcoholConsump: float = Form(...),
+    AnyHealthcare: float = Form(...),
+    NoDocbcCost: float = Form(...),
+    GenHlth: float = Form(...),
+    MentHlth: float = Form(...),
+    PhysHlth: float = Form(...),
+    DiffWalk: float = Form(...),
+    Sex: float = Form(...),
+    Age: float = Form(...),
+    Education: float = Form(...),
+    Income: float = Form(...),
+
     ):
     # data 받기
     input_data = {
-        HighBP: float,
-        HighChol: float,
-        CholCheck: float,
-        BMI: float,
-        Smoker: float,
-        Stroke: float,
-        Diabetes: float,
-        PhysActivity: float,
-        Fruits: float,
-        Veggies: float,
-        HvyAlcoholConsump: float,
-        AnyHealthcare: float,
-        NoDocbcCost: float,
-        GenHlth: float,
-        MentHlth: float,
-        PhysHlth: float,
-        DiffWalk: float,
-        Sex: float,
-        Age: float,
-        Education: float,
-        Income: float,
+        "HighBP": HighBP,
+        "HighChol": HighChol,
+        "CholCheck": CholCheck,
+        "BMI": BMI,
+        "Smoker": Smoker,
+        "Stroke": Stroke,
+        "Diabetes": Diabetes,
+        "PhysActivity": PhysActivity,
+        "Fruits": Fruits,
+        "Veggies": Veggies,
+        "HvyAlcoholConsump": HvyAlcoholConsump,
+        "AnyHealthcare": AnyHealthcare,
+        "NoDocbcCost": NoDocbcCost,
+        "GenHlth": GenHlth,
+        "MentHlth": MentHlth,
+        "PhysHlth": PhysHlth,
+        "DiffWalk": DiffWalk,
+        "Sex": Sex,
+        "Age": Age,
+        "Education": Education,
+        "Income": Income,
     }
+    print(input_data)
 
 
 
@@ -85,7 +89,7 @@ async def predict(
 
     #input_df = process_input_data(input_data)
     input_df = pd.DataFrame.from_dict(input_data, orient='index').T
-
+    print(input_df, input_df.shape)
     # set random seed
     seed = 34
     set_random_seed(seed)
@@ -172,6 +176,8 @@ async def predict(
                 8.0]
 
     numeric_cols = input_df.select_dtypes(include="float64").columns
+    print(f"numeric_cols: {numeric_cols}")
+
     HE_X = [[] for _ in range(len(numeric_cols))]
 
     for i, column in enumerate(numeric_cols):
@@ -188,6 +194,7 @@ async def predict(
     # Encryption
     msg_df = heaan.Message(log_slots)
     ctxt_df = heaan.Ciphertext(context)
+
     for i in range(col):
         for j in range(test_n):
             msg_df[test_n * i + j] = HE_df[i][j]
@@ -212,7 +219,13 @@ async def predict(
         else:
             pred = 0
 
-    return {"result": pred}
+    if pred == 0:
+        return templates.TemplateResponse("front/result_page_bad.html", {"request": request})
+    elif pred == 1:
+        return templates.TemplateResponse("front/result_page_good.html", {"request": request})
+
+
+    #return {"result": pred}
 
 
 if __name__ == "__main__":
