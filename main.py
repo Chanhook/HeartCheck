@@ -3,12 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-
-from input_data import InputData
-from preprocess import process_input_data
 from IS import *
-import pandas as pd
-
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -20,41 +15,36 @@ async def home(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
 
 
-@app.get("/question1", response_class=HTMLResponse)
-async def question1(request: Request):
+@app.get("/question", response_class=HTMLResponse)
+async def question(request: Request):
     return templates.TemplateResponse("front/question_page1.html", {"request": request})
-
-@app.post('/test')
-def disable_cat(form: str = Form(...)):
-    return f'form: {form}'
 
 
 @app.post("/predict", response_class=HTMLResponse)
 async def predict(
-    request: Request,
-    HighBP: float = Form(...),
-    HighChol: float  = Form(...),
-    CholCheck: float = Form(...),
-    BMI: float = Form(...),
-    Smoker: float = Form(...),
-    Stroke: float = Form(...),
-    Diabetes: float = Form(...),
-    PhysActivity: float = Form(...),
-    Fruits: float = Form(...),
-    Veggies: float = Form(...),
-    HvyAlcoholConsump: float = Form(...),
-    AnyHealthcare: float = Form(...),
-    NoDocbcCost: float = Form(...),
-    GenHlth: float = Form(...),
-    MentHlth: float = Form(...),
-    PhysHlth: float = Form(...),
-    DiffWalk: float = Form(...),
-    Sex: float = Form(...),
-    Age: float = Form(...),
-    Education: float = Form(...),
-    Income: float = Form(...),
-
-    ):
+        request: Request,
+        HighBP: float = Form(...),
+        HighChol: float = Form(...),
+        CholCheck: float = Form(...),
+        BMI: float = Form(...),
+        Smoker: float = Form(...),
+        Stroke: float = Form(...),
+        Diabetes: float = Form(...),
+        PhysActivity: float = Form(...),
+        Fruits: float = Form(...),
+        Veggies: float = Form(...),
+        HvyAlcoholConsump: float = Form(...),
+        AnyHealthcare: float = Form(...),
+        NoDocbcCost: float = Form(...),
+        GenHlth: float = Form(...),
+        MentHlth: float = Form(...),
+        PhysHlth: float = Form(...),
+        DiffWalk: float = Form(...),
+        Sex: float = Form(...),
+        Age: float = Form(...),
+        Education: float = Form(...),
+        Income: float = Form(...),
+):
     # data 받기
     input_data = {
         "HighBP": HighBP,
@@ -81,13 +71,11 @@ async def predict(
     }
     print(input_data)
 
-
-
     # Training
     # set logging level
     logging.basicConfig(level=logging.DEBUG)
 
-    #input_df = process_input_data(input_data)
+    # input_df = process_input_data(input_data)
     input_df = pd.DataFrame.from_dict(input_data, orient='index').T
     print(input_df, input_df.shape)
     # set random seed
@@ -223,9 +211,6 @@ async def predict(
         return templates.TemplateResponse("front/result_page_bad.html", {"request": request})
     elif pred == 1:
         return templates.TemplateResponse("front/result_page_good.html", {"request": request})
-
-
-    #return {"result": pred}
 
 
 if __name__ == "__main__":
