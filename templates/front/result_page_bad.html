@@ -9,7 +9,11 @@
 </head>
 <script>
     function goToPreviousPage() {
-        window.location.href = "question_page3.html";
+        window.location.href = "/question";
+    }
+
+    function goToHomePage() {
+        window.location.href = "/";
     }
 
 </script>
@@ -26,7 +30,7 @@
         <button class="v1_819"  onclick="goToPreviousPage()">
             <span class="v1_823"> Previous</span>
         </button>
-        <button class="v1_824" onclick="window.close()">
+        <button class="v1_824" onclick="goToHomePage()">
             <span class="v1_825">Close </span>
 
         </button>
