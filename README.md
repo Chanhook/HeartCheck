@@ -70,3 +70,13 @@ Best THRES: 0.19
 Accuracy: 0.6458, Precision: 0.4483, Recall: 0.7123, F1 Score: 0.5503
 INFO:root:Decrypt ctxt_infer
 ```
+
+# Demonstration
+<img width="1624" alt="image" src="https://github.com/Chanhook/HeartCheck/assets/76461625/07313c00-6495-4ef0-bd57-2261e047e248">
+survey page
+
+<img width="1458" alt="image" src="https://github.com/Chanhook/HeartCheck/assets/76461625/992acd93-7ab8-495b-966b-a17ca49c19d4">
+good page
+
+<img width="1500" alt="image" src="https://github.com/Chanhook/HeartCheck/assets/76461625/aba19e00-09fa-49a5-9638-d8331c106a2c">
+bad page
