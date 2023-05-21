@@ -3,10 +3,25 @@ you should install the required packages.
 
 `pip install -r requirements.txt`
 
-# Run the code
+# Run the fastAPI
 you can run the following command.
 
 `python main.py`
+
+# console output
+```shell
+INFO:     Started server process [22276]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+```
+When you go to http://localhost:8000 to conduct a survey and submit, the model predicts the results and displays the results page.
+
+
+# Run HE model
+you can run the following command.
+
+`python IS.py`
 
 or you can just click the "RUN Button" in your IDE.
 
