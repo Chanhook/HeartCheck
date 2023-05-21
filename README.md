@@ -6,7 +6,7 @@ you should install the required packages.
 # Run the code
 you can run the following command.
 
-`python IS.py`
+`python main.py`
 
 or you can just click the "RUN Button" in your IDE.
 
