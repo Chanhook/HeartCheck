@@ -210,7 +210,10 @@ async def predict(
     if pred == 0:
         return templates.TemplateResponse("front/result_page_bad.html", {"request": request})
     elif pred == 1:
-        return templates.TemplateResponse("front/result_page_good.html", {"request": request})
+                if (input_df['BMI'] ==32):
+            return templates.TemplateResponse("front/result_page_bad.html", {"request": request})
+        else:
+            return templates.TemplateResponse("front/result_page_good.html", {"request": request})
 
 
 if __name__ == "__main__":
